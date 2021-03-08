@@ -1,16 +1,20 @@
 {
-  "name": "budget",
+  "name": "Expendex",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Camila Barros",
   "license": "MIT",
+  "engines": {
+    "npm": "7.x",
+    "node": "14.x"
+  },
   "scripts": {
     "serve": "live-server public/",
     "dev-server": "webpack serve --mode=development",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --env production --mode=production",
     "start": "node server/server.js",
-    "heroku-postbuild": "yarn run build:prod"
+    "heroku-postbuild": "npm run build:prod"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
