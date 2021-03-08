@@ -1,0 +1,53 @@
+{
+  "name": "budget",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Camila Barros",
+  "license": "MIT",
+  "scripts": {
+    "serve": "live-server public/",
+    "dev-server": "webpack serve --mode=development",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --env production --mode=production",
+    "start": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.25.0",
+    "babel-loader": "7.1.1",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1",
+    "css-loader": "0.28.4",
+    "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "firebase": "^8.2.7",
+    "history": "^4.10.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "mini-css-extract-plugin": "^1.3.6",
+    "moment": "^2.29.1",
+    "numeral": "^2.0.6",
+    "react": "^17.0.1",
+    "react-dates": "^21.8.0",
+    "react-dom": "^17.0.1",
+    "react-modal": "^3.12.1",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "style-loader": "0.18.2",
+    "url-loader": "^4.1.1",
+    "uuid": "^8.3.2",
+    "validator": "8.0.0",
+    "webpack": "^5.21.2"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^6.0.0",
+    "live-server": "^1.2.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
