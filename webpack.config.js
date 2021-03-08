@@ -1,6 +1,4 @@
 const path = require('path')
-// let mode = process.env.NODE_ENV || 'development'
-const Dotenv = require('dotenv-webpack')
 
 module.exports = env => {
   let prodMode = env.production
@@ -28,7 +26,7 @@ module.exports = env => {
         }
       ]
     },
-    plugins: [new Dotenv()],
+    plugins: [],
     devtool: prodMode ? false : 'inline-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
