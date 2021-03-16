@@ -108,7 +108,10 @@ export default function ExpenseForm({ handleSubmit, selectedExpense }) {
             />
           </div>
           <div className='input-field col s12'>
-            <button className='waves-effect waves-light btn-large green lighten-1'>
+            <button
+              id='submit-btn'
+              className='waves-effect waves-light btn-large green lighten-1'
+            >
               Submit
             </button>
           </div>

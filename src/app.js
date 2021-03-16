@@ -12,6 +12,8 @@ import LoadingPage from './components/LoadingPage'
 import 'materialize-css/dist/css/materialize.min.css'
 import './styles/styles.css'
 
+//TODO: - FIX CALENDAR (Z-INDEX) - CHECK RESPONSIVENESS
+
 const store = configStore()
 
 ReactDOM.render(<LoadingPage />, document.getElementById('app'))

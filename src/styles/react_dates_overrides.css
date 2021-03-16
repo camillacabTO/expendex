@@ -55,3 +55,17 @@ div.DateInput.DateInput_1 {
   padding: 0 !important;
   background-color: var(--background-color) !important;
 }
+
+input#your_unique_end_date_id,
+input#your_unique_start_date_id {
+  border: none !important;
+  background-color: transparent;
+}
+
+.DateRangePickerInput.DateRangePickerInput_1.DateRangePickerInput__withBorder.DateRangePickerInput__withBorder_2 {
+  border: none !important;
+}
+
+.DateRangePickerInput__showClearDates.DateRangePickerInput__showClearDates_3 {
+  background-color: var(--background-color) !important;
+}
