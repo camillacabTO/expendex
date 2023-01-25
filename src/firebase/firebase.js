@@ -3,14 +3,14 @@ import 'firebase/database';
 import 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyB5kd3wrGuMGSF-acnVmd0mUpfD9r8Vzrc',
-  authDomain: 'budgetapp-e193d.firebaseapp.com',
-  databaseURL: 'https://budgetapp-e193d-default-rtdb.firebaseio.com',
-  projectId: 'budgetapp-e193d',
-  storageBucket: 'budgetapp-e193d.appspot.com',
-  messagingSenderId: '904745018697',
-  appId: '1:904745018697:web:7798abb43fe35cc717a698',
-  measurementId: 'G-ZK08L9B2MD',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
