@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { loginFirebase } from '../actions/auth';
-import backgroundImage from './background1.svg';
+import backgroundImage from '../assets/background1.svg';
 import '../styles/styles.css';
 
 const LoginPage = ({ triggerLogin }) => {

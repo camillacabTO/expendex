@@ -1,5 +1,5 @@
 import React from 'react';
-import spinner from './spinner.gif';
+import spinner from '../assets/spinner.gif';
 import '../styles/styles.css';
 
 const LoadingPage = () => {
