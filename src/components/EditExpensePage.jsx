@@ -1,44 +1,45 @@
-import React, { useEffect } from 'react'
-import { connect } from 'react-redux'
-import ExpenseForm from './ExpenseForm'
-import { editExpenseAsync, removeExpenseAsync } from '../actions/expenses'
-import M from 'materialize-css'
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import ExpenseForm from './ExpenseForm';
+import { editExpenseAsync, removeExpenseAsync } from '../actions/expenses';
+import M from 'materialize-css';
 
 const EditExpensePage = ({
   history,
   selectedExpense,
   editExpense,
-  removeExpense
+  removeExpense,
 }) => {
   useEffect(() => {
-    M.AutoInit()
-  }, [])
+    M.AutoInit();
+  }, []);
   return (
     <div className='container' style={{}}>
       <ExpenseForm
         selectedExpense={selectedExpense}
-        handleSubmit={expense => {
-          editExpense(selectedExpense.id, expense)
-          history.push('/')
+        handleSubmit={(expense) => {
+          editExpense(selectedExpense.id, expense);
+          history.push('/');
         }}
       />
       <a
+        style={{ marginLeft: '14px' }}
         className='waves-effect waves-light btn-large red darken-1 modal-trigger'
         href='#modal1'
       >
         Delete
       </a>
-      <div id='modal1' class='modal'>
-        <div class='modal-content'>
+      <div id='modal1' className='modal'>
+        <div className='modal-content'>
           <h4>Alert</h4>
           <h6>Are you sure you want to delete this expense?</h6>
         </div>
-        <div class='modal-footer'>
+        <div className='modal-footer'>
           <a
-            class='waves-effect waves-green btn-flat'
+            className='waves-effect waves-green btn-flat'
             onClick={() => {
-              removeExpense(selectedExpense.id)
-              history.push('/')
+              removeExpense(selectedExpense.id);
+              history.push('/');
             }}
           >
             Confirm
@@ -46,20 +47,20 @@ const EditExpensePage = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const mapStateToProps = (state, ownProps) => {
   return {
     selectedExpense: state.expenses.find(
-      expense => expense.id === ownProps.match.params.id
-    )
-  }
-}
+      (expense) => expense.id === ownProps.match.params.id
+    ),
+  };
+};
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
   editExpense: (id, expense) => dispatch(editExpenseAsync(id, expense)),
-  removeExpense: id => dispatch(removeExpenseAsync(id))
-})
+  removeExpense: (id) => dispatch(removeExpenseAsync(id)),
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditExpensePage)
+export default connect(mapStateToProps, mapDispatchToProps)(EditExpensePage);

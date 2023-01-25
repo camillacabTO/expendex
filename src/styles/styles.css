@@ -15,7 +15,7 @@
 }
 
 body,
-div#app {
+div#root {
   background-color: var(--background-color);
   color: var(--tex-color);
   font-family: 'Roboto', sans-serif;
