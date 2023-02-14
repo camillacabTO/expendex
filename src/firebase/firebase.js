@@ -18,4 +18,8 @@ firebase.initializeApp(firebaseConfig);
 const expensesRef = firebase.database();
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
+googleProvider.setCustomParameters({
+  prompt: 'select_account',
+});
+
 export { firebase, googleProvider, expensesRef as default };
