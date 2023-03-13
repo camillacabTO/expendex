@@ -162,7 +162,7 @@ div#login-page {
 
 div#loading-page,
 div#login-page h3 {
-  color: var(--darken-main)
+  color: var(--darken-main);
 }
 
 div#login-page img {
@@ -174,7 +174,7 @@ div#login-page img {
 .card-panel {
   z-index: 10;
   min-height: 300px !important;
-  width: 35%;
+  width: 30%;
   min-width: fit-content;
   display: flex;
   flex-direction: column;

@@ -9,4 +9,4 @@
 - Firebase Authentication
 - Firestore Real-time Database
 
-### URL: https://expendex.netlify.app/
+### URL: https://expendex.netlify.app
